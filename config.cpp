@@ -4,7 +4,7 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = 1.68;
         requiredAddons[] = {""};
-        version = 1.0.2;
+        version = 1.1.0;
         author[] = {"S3Savage"};
         authorUrl = "";
     };
