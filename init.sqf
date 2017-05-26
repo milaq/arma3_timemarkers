@@ -54,7 +54,7 @@ ts_enabled = false;
 
 			_markerdialog_ok ctrlAddEventHandler ['ButtonClick', {
 				[] spawn {
-					if (ts_enabled) then {
+					if (ts_enabled && count allMapMarkers > 0) then {
 						_newMarker = (allMapMarkers select count allMapMarkers - 1);
 						if ( _newMarker select [ 0, 13 ] == "_USER_DEFINED" ) then {
 							_text = markerText _newMarker;
