@@ -47,7 +47,7 @@ ts_enabled = false;
 			}];
 
 			_elem_ts_desc = _markerdialog ctrlCreate ["RscText", -1];
-			_elem_ts_desc ctrlSetPosition [_markerdialog_ll_corner_x + 0.014 / _interface_div, _markerdialog_ll_corner_y - _markerdialog_elem_height + 0.005];
+			_elem_ts_desc ctrlSetPosition [_markerdialog_ll_corner_x + _markerdialog_elem_height - 0.015, _markerdialog_ll_corner_y - _markerdialog_elem_height + 0.0064];
 			_elem_ts_desc ctrlSetScale 0.75;
 			_elem_ts_desc ctrlSetText "Add timestamp";
 			_elem_ts_desc ctrlCommit 0;
