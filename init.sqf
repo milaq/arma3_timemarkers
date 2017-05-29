@@ -53,16 +53,13 @@ ts_enabled = false;
 			_elem_ts_desc ctrlCommit 0;
 
 			_markerdialog_ok ctrlAddEventHandler ['ButtonClick', {
-				[] spawn {
-					if (ts_enabled && count allMapMarkers > 0) then {
-						_newMarker = (allMapMarkers select count allMapMarkers - 1);
-						if ( _newMarker select [ 0, 13 ] == "_USER_DEFINED" ) then {
-							_text = markerText _newMarker;
-							_time = [daytime, "HH:MM"] call BIS_fnc_timeToString;
-							_newMarker setMarkerText format ["%1 [%2]", _text, _time];
-						};
-					};
+				if (ts_enabled ) then {
+					_elem_description = finddisplay 54 displayctrl 101;
+					_time = [daytime, "HH:MM"] call BIS_fnc_timeToString;
+					_new_text = format ["%1 [%2]", ctrlText _elem_description, _time];
+					_elem_description ctrlSetText _new_text;
 				};
+				false
 			}];
 		};
 	}];
