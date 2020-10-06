@@ -3,7 +3,10 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = 1.68;
-        requiredAddons[] = {""};
+        requiredAddons[] = {
+            "A3_Data_F_Mod_Loadorder",
+            "A3_Data_F_Oldman_Loadorder"
+        };
         version = 1.1.3;
         author[] = {"S3Savage"};
         authorUrl = "";
